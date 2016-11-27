@@ -1,6 +1,6 @@
 {
   "name": "nextlevel-helpers",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "helpers package",
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",
