@@ -2,11 +2,15 @@
 # nextlevel
 -------------------
 
+
+![](https://travis-ci.org/aretecode/nextlevel.svg?branch=master)
+
+
 A month ago, my colleague Mario Scheliga asked me what goals I wanted to achieve before the year ends. I told him I wanted to level up my build tool skills. So in my free time, I started defining what “leveling up my build tool skills” meant. 
 After doing some experimentation & research with him, I wrote out a list:
 
 ### monorepo
-- [~] modularized lerna monorepo
+- [ ] [~] modularized lerna monorepo
 - [ ] travis + docker staging deploying (with only one easy command, deploy at will, simultaneous or sequentially)
 - [x] flowtypes (reusable across projects)
 -> [x] cli test running
@@ -16,14 +20,15 @@ After doing some experimentation & research with him, I wrote out a list:
 
 ### backend
 - [x] nodejs 6.9.1
-- [~] (simultaneous) hot reloading dev+test server(s) in one cli (works but haven’t added second backend)
+- [x] nodejs 7.1
+- [ ] [~] (simultaneous) hot reloading dev+test server(s) in one cli (works but haven’t added second backend)
 - [x] es6 + webpack2 + babel
 - [x] point cut routing setup
-- [~] hot route analysis to be used for code chunking least|most used routes
+- [ ] [~] hot route analysis to be used for code chunking least|most used routes
 - [x] sharable di & configs
 
 ### frontend
-- [x]  hot reloading 3
+- [x] hot reloading 3
 - [x] point cut routing setup
 - [x] react 15.4.1 & react router 4~
 - [x] es6 + webpack2 + babel
@@ -78,7 +83,7 @@ After doing some experimentation & research with him, I wrote out a list:
 1. ~~add flag to `.point(ns, context)`~~
 2. ~~add method `invokeFor`~~
 3. ~~add method `apply` -> would require changing exec too (could do `applyExec`)~~
-4. [x] **change the signature, if first argument is object it is the context** _THIS_
+4. [x] _change the signature, if first argument is object it is the context_ <- _THIS_
 - [x] async wrapper IN xtpoint invoking routing wrapper? like in whitelists
 - [x] reusable core for both backends -> split _CONFIGS_
 
