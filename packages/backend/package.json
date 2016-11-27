@@ -80,7 +80,6 @@
     "webpack-hot-middleware": "2.13.2",
     "webpack-hot-server-middleware": "0.0.4",
     "webpack-node-externals": "1.5.4",
-    "webpack2-externals-plugin": "^1.0.0",
     "clean-webpack-plugin": "0.1.14"
   }
 }
