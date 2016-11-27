@@ -7,4 +7,3 @@ node_modules
 **/*debug.log
 **/.tmp
 **/dist
-**/build
