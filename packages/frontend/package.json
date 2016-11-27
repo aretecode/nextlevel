@@ -47,7 +47,6 @@
     "karma-notify-reporter": "1.0.1",
     "karma-sinon-chai": "1.2.4",
     "karma-webpack": "1.8.0",
-    "microtime": "2.1.2",
     "nwb": "0.12.2",
     "react": "15.4.1",
     "react-addons-test-utils": "15.4.1",
