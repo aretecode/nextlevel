@@ -4,7 +4,6 @@
   "version": "0.0.1",
   "description": "Skeleton build tool learning using: lerna monorepo, webpack2, nodejs, hot reloader 3, react router 4, preact, jsdom, enzyme, babel6 loader, async extension point bootstrap, flowtypes, eslint autofixing...",
   "scripts": {
-    "prepublish": "lerna exec npm run build",
     "build": "lerna exec npm run build",
     "buildp": "lerna exec npm run buildp",
     "test": "cd packages && cd backend && npm t && cd ../frontend && npm t",
