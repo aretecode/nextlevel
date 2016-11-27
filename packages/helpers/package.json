@@ -1,0 +1,42 @@
+{
+  "name": "nextlevel-helpers",
+  "version": "0.0.1",
+  "description": "helpers package",
+  "main": "lib/index.js",
+  "jsnext:main": "src/index.js",
+  "module": "es/index.js",
+  "repository": "https://github.com/aretecode/nextlevel/tree/master/packages/helpers",
+  "npm": {
+    "esModules": true
+  },
+  "files": [
+    "es6",
+    "lib",
+    "umd"
+  ],
+  "keywords": [
+    "monorepo",
+    "nextlevel",
+    "babel",
+    "webpack"
+  ],
+  "scripts": {
+    "build": "nwb build-react-app",
+    "buildp": "nwb build-react-app",
+    "clean": "nwb clean-app",
+    "start": "node server.js",
+    "test": "echo '@TODO: tests for helpers';",
+    "test:coverage": "nwb test --coverage",
+    "test:watch": "nwb test --server",
+    "bench": "nwb test --benchmark",
+    "flow": "flow; test $? -eq 0 -o $? -eq 2"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "nwb": "0.12.2"
+  },
+  "dependencies": {
+    "webpack-node-externals": "^1.5.4"
+  }
+}

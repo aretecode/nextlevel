@@ -1,0 +1,25 @@
+language: node_js
+node_js:
+  - 6.9
+  - 7.1
+
+install:
+  - npm install
+  - lerna bootstrap
+script:
+  - npm build
+  - npm test
+  - npm run buildp
+  - npm run bench
+
+# matrix:
+#   -
+# - include
+#   env:
+#     - LINT: true
+#     - FLOW: true
+# after_success:
+
+branches:
+  only:
+    - master

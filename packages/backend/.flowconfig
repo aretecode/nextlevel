@@ -1,0 +1,13 @@
+[include]
+./src/plugins/helpscout
+
+[ignore]
+.*/build/.*
+.*/lib/.*
+.*/dist/.*
+.*/config/.*
+.*/node_modules/.*
+.*/.tmp/.*
+
+[libs]
+../../flow/
