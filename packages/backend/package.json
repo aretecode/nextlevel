@@ -45,7 +45,6 @@
     "babel-cli": "^6.11.4",
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.8",
-    "babel-plugin-async-try-catch": "0.0.9",
     "babel-plugin-external-helpers": "^6.18.0",
     "babel-plugin-syntax-exists": "0.0.3",
     "babel-plugin-transform-async-to-generator": "^6.16.0",
