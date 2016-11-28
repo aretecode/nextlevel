@@ -9,7 +9,7 @@ export const bootstrap = (ext) => {
       const chalk = require('chalk')
 
       // returns string modified with the colors
-      function appplyRandomConsoleColor(args) {
+      function appplyRandomConsoleColor(args: mixed): string {
         // list of colors in https://github.com/chalk/ansi-styles#colors
         const colors = [
           'red',
@@ -108,6 +108,6 @@ export const bootstrap = (ext) => {
       // global.console.errror = 'nope'
       // global.console.debug = console.debug
       // global.console.info = console.info
-    }
+    },
   })
 }

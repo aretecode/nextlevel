@@ -1,8 +1,8 @@
-import {ext} from 'xtpoints'
-import plugins from '../plugins'
+import {ext, loader} from 'xtpoints'
 const di = {}
 
-plugins(ext, di)
+const modulesContext = require.context('../plugins', true, /^\.\/[^\/]+?\/bundle(.*)\.s?js$/)
+loader(modulesContext, __webpack_require__, ext, di)
 
 export default {
   ext: ext,

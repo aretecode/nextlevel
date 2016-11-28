@@ -10,9 +10,6 @@ module.exports = function(options = {hot: false, react: false}) {
     'transform-async-to-generator',
     'transform-class-properties',
     'transform-object-rest-spread',
-    // 'external-helpers',
-    // 'async-try-catch',
-    // 'babel-plugin-syntax-exists',
   ]
   if (options.react) {
     presets.push('react')

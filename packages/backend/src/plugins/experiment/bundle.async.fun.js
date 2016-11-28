@@ -12,72 +12,70 @@
 // https://github.com/yortus/asyncawait
 // https://www.danyow.net/es7-async-await-with-aurelia/
 
-export const bootstrap = (ext) => {
-  ext.point('app.setup').extend({
-    id: 'async',
-    disabled: true,
-    exec: function() {
-      // using `await Promise.delay(1000)`
-      // ~ `sleep(1000)` in synchronous languages
-      // or setTimeout =>{}, 1000
-      function promised(err = false) {
-        return new Promise(async (resolve, reject) => {
-          if (err) {
-            var start = Date.now()
-            await Promise.delay(1000)
-            console.log('waited...', (Date.now() - start))
-            return reject('errored')
-          }
-
+ext.point('app.setup').extend({
+  id: 'async',
+  index: 1000, // make it run last
+  exec: function() {
+    // using `await Promise.delay(1000)`
+    // ~ `sleep(1000)` in synchronous languages
+    // or setTimeout =>{}, 1000
+    function promised(err = false) {
+      return new Promise(async (resolve, reject) => {
+        if (err) {
+          var start = Date.now()
           await Promise.delay(1000)
-          resolve('resolved')
-        })
-      }
-
-      // this is here because you cannot use a real error above
-      // unless that is also inside of a catch
-      // if we want to `await` a delay
-      function promisedTimeout(err = false) {
-        return new Promise((resolve, reject) => {
-          if (err) {
-            return setTimeout(() => {
-              reject(new Error('reject'))
-            }, 1000)
-          }
-          resolve('resolved')
-        })
-      }
-
-      async function printFile() {
-        // var asyncError = error => console.error(`error reading ${filename}:`, error.stack)
-        try {
-          const contents = await promised()
-          console.log('always - awaited contents', contents)
-        } catch (e) {
-          throw new Error('never gets called')
-        }
-        try {
-          const contents = await promised(true)
-          console.error('never -  because no catch - async succeeded', contents)
-        } catch (e) {
-          console.log('always - caught', e)
-        }
-        try {
-          const contents = await promisedTimeout(true)
-          console.error('never - because no catch', contents)
-        } catch (e) {
-          console.log('always - caught real `Error`', e.message)
+          console.log('waited...', (Date.now() - start))
+          return reject('errored')
         }
 
-        const contentsCatch = await promised(true).catch(e => console.log('caught the error - always', e))
-        console.log('always - undefined - because error is caught', contentsCatch)
+        await Promise.delay(1000)
+        resolve('resolved')
+      })
+    }
 
-        const contentsNever = await promised(true)
-        console.log('never - is caught by the errors bundle', contentsNever)
+    // this is here because you cannot use a real error above
+    // unless that is also inside of a catch
+    // if we want to `await` a delay
+    function promisedTimeout(err = false) {
+      return new Promise((resolve, reject) => {
+        if (err) {
+          return setTimeout(() => {
+            reject(new Error('reject'))
+          }, 1000)
+        }
+        resolve('resolved')
+      })
+    }
+
+    async function printFile() {
+      // var asyncError = error => console.error(`error reading ${filename}:`, error.stack)
+      try {
+        const contents = await promised()
+        console.log('always - awaited contents', contents)
+      } catch (e) {
+        throw new Error('never gets called')
+      }
+      try {
+        const contents = await promised(true)
+        console.error('never -  because no catch - async succeeded', contents)
+      } catch (e) {
+        console.log('always - caught', e)
+      }
+      try {
+        const contents = await promisedTimeout(true)
+        console.error('never - because no catch', contents)
+      } catch (e) {
+        console.log('always - caught real `Error`', e.message)
       }
 
-      printFile()
-      console.log('always - happens before awaiting')
-    },
-  })
-}
+      const contentsCatch = await promised(true).catch(e => console.log('caught the error - always', e))
+      console.log('always - undefined - because error is caught', contentsCatch)
+
+      const contentsNever = await promised(true)
+      console.log('never - is caught by the errors bundle', contentsNever)
+    }
+
+    printFile()
+    console.log('always - happens before awaiting')
+  },
+})

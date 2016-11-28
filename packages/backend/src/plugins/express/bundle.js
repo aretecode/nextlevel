@@ -17,7 +17,7 @@ export const bootstrap = (ext, di) => {
 
       const express = require('express')
       const app = express()
-      di.service('app', () => app)
+      di.service('app', (): Express => app)
     },
   })
 }

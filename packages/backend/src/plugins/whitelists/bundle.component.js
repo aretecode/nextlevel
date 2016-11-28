@@ -22,18 +22,18 @@ export const bootstrap = (ext, di, db) => {
         // @NOTE: should use a notifier and/or store to file
         console.log(e)
         return res.status(500).json({
-          message: `error reading from db`
+          message: `error reading from db`,
         })
       })
       if (rows.length !== 0) {
         return res.status(422).json({
-          message: `list: ${list} with value/id: ${id} was already in the db`
+          message: `list: ${list} with value/id: ${id} was already in the db`,
         })
       }
 
       await db.put(listData)
       res.status(201).json({
-        message: `added ${id} to whitelist`
+        message: `added ${id} to whitelist`,
       })
     },
 

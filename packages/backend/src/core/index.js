@@ -1,23 +1,21 @@
-// loader
-import {ext} from 'xtpoints'
+import {ext, loader} from 'xtpoints'
 import Bottle from 'bottlejs'
 import config from 'config'
-import knex from './db'
-import plugins from '../plugins'
+import dbAdapter from './db'
 import path from 'path'
 
 // connection
-const db = knex(config)
+const db = dbAdapter(config)
 
 // container
 const di = new Bottle()
 
 // add config & db to the di container
-di.service('config', () => config)
-di.service('db', () => db)
+di.service('config', (): object => config)
+di.service('db', (): object => db)
 
 // could be on config
-di.service('path', () => {
+di.service('path', (): object => {
   return {
     path: path,
     root: path.resolve(__dirname + '../../../'),
@@ -26,7 +24,13 @@ di.service('path', () => {
 })
 
 // load plugins
-plugins(ext, di, config, db)
+// only load sweetjs on fun environment for now
+let modulesContext
+if (process.env.NODE_ENV === 'fun')
+  modulesContext = require.context('../plugins', true, /^\.\/[^\/]+?\/bundle(.*)\.s?js$/)
+else
+  modulesContext = require.context('../plugins', true, /^\.\/[^\/]+?\/bundle(.*)\.js$/)
+loader(modulesContext, __webpack_require__, ext, di, config, db)
 
 // @NOTE: config and db could be plugins
 const externalApi = {

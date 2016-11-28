@@ -15,8 +15,9 @@ setTimeout(function() {
   process.exit(0)
 }, 1000000)
 
+// listens to changes in the file
 // wait until after webpack builds for the first time
-// @TODO: should do file check, setInterval, clearInterval
+// @TODO: should do file check
 setTimeout(function() {
   var dir = path.resolve(__dirname, "../")
   var bundle = path.join(dir, 'dist/main.bundle.js')

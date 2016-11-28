@@ -30,7 +30,7 @@
     "preact": "6.3.0",
     "preact-compat": "3.8.2",
     "react-router": "4.0.0-alpha.6",
-    "xtpoints": "2.0.0"
+    "xtpoints": "2.0.1"
   },
   "devDependencies": {
     "nextlevel-helpers": "^0.0.4",

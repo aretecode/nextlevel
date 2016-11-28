@@ -19,6 +19,7 @@ After doing some experimentation & research with him, I wrote out a list:
 - [x] benchmarks
 
 ### backend
+- [x] express 5
 - [x] nodejs 6.9.1
 - [x] nodejs 7.1
 - [ ] [~] (simultaneous) hot reloading dev+test server(s) in one cli (works but haven’t added second backend)

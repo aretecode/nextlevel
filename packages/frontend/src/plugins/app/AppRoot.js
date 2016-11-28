@@ -28,6 +28,11 @@ import {ext} from 'xt'
 // http://broonix-rants.ghost.io/upgrading-to-react-router-v4/
 // https://news.ycombinator.com/item?id=12511419
 // https://github.com/ReactTraining/react-router/tree/v4/website/examples
+//
+// ## routing farce + found
+// https://github.com/4Catalyzer/found/blob/master/examples/basic-jsx/src/index.js
+// https://medium.com/@taion/react-routing-and-data-fetching-ec519428135c#.5bz15uj6z
+// https://github.com/4Catalyzer/farce
 
 class AppRoot extends React.Component {
   render() {

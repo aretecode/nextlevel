@@ -1,7 +1,7 @@
 import {ext, di} from './index'
 
 // NOTE: async startup
-export default async function() {
+export default async function(): void {
   // help all plugins to configure themselves
   await ext('core.bootstrap.exec', di)
 

@@ -2,7 +2,7 @@ import {ext, di} from './index'
 import {firstOpenPort} from 'helpers'
 
 // @NOTE: async startup
-async function init(port = null): mixed {
+async function init(port: number | null): mixed {
 
   // invoke all app setups
   //
@@ -27,17 +27,17 @@ async function init(port = null): mixed {
   if (port === 'open')
     port = await firstOpenPort(3000)
 
-  const server = await di.container.app.listen(port, (err) => {
+  const server = await di.container.app.listen(port, (err: Error) => {
     if (err) console.error(err.stack)
     console.log('listening on port ' + port)
   })
   if (!di.container.server)
-    di.service('server', () => server)
+    di.service('server', (): Express => server)
 
   return port
 }
 
-init.close = function(cb) {
+init.close = function(cb: ?Function) {
   di.container.server.close(cb)
 }
 
