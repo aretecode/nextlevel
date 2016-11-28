@@ -1,11 +1,11 @@
 var _ = require('lodash')
-var nodeExternals = require('webpack-node-externals')
+var path = require('path')
 var config = require('./webpack.config.base')
 
-module.exports = _.defaultsDeep(config, {
-  // in order to ignore built-in modules like path, fs, etc.
-  target: 'node',
+var dirMono = path.resolve(__dirname, "../../../")
+var nodeConfig = require(dirMono + '/config/build/node.js')
+var config = require('./webpack.config.base.js')
 
-  // in order to ignore all modules in node_modules folder
-  externals: [nodeExternals()],
-})
+_.defaultsDeep(config, nodeConfig)
+
+export default config
