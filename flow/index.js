@@ -3,19 +3,19 @@
 declare type NextFunction = (error?: Object) => void
 
 declare class Express {
-  post(route: any, cb: Function): any;
-  get(route: any, cb: Function): any;
+  post(route: any, cb: Function): any,
+  get(route: any, cb: Function): any
 }
 
 declare class Request {
-  headers: {[key: string]: string};
-  body: Object;
+  headers: {[key: string]: string},
+  body: Object
 }
 
 declare class Response {
-  json(body: any): Response;
-  status(statusCode: number): Response;
-  on(type: String, mappingFunction: Function): any;
+  json(body: any): Response,
+  status(statusCode: number): Response,
+  on(type: String, mappingFunction: Function): any
 }
 
 

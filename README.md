@@ -113,3 +113,4 @@ After doing some experimentation & research with him, I wrote out a list:
 - [ ] package manager
 - [ ] move reusable deps like underscore to root (issue with lerna)
 - [ ] later, add second backend
+- [ ] test code coverage

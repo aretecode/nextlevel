@@ -38,8 +38,6 @@ var config = {
     // https://github.com/insin/nwb/blob/master/docs/Configuration.md#webpack-configuration
     // http://stackoverflow.com/questions/32296967/webpack-dev-server-doesnt-generate-source-maps
     // https://webpack.github.io/docs/configuration.html#devtool
-    // https://github.com/insin/nwb/blob/master/docs/Configuration.md#webpack-configuration
-    // https://webpack.github.io/docs/configuration.html#output-devtoollinetoline
     // https://github.com/gaearon/react-hot-loader/blob/master/docs/Troubleshooting.md
     // https://github.com/glenjamin/ultimate-hot-reloading-example
     loaders: [
@@ -55,7 +53,10 @@ var config = {
   },
 
   entry: [
+    // https://github.com/gaearon/react-hot-loader/issues/243#issuecomment-211957140
     'react-hot-loader/patch',
+
+    // https://github.com/glenjamin/webpack-hot-middleware#config
     'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&overlay=true&reload=true',
     './src/index.js',
   ],

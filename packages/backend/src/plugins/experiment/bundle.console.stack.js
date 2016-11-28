@@ -20,7 +20,7 @@ ext.point('app.setup').extend({
         // add the indexes/error-position to the lines without node_modules
         // filter out `node_modules`
         if (typeof value === 'string' && value.includes('node_modules')) {
-          var vals = value
+          arguments[key] = value
           .split('\n')
           .map((line: string, i: number): string | boolean => {
             if (/node_modules/gmi.test(line))
@@ -33,8 +33,6 @@ ext.point('app.setup').extend({
             return line
           })
           .join('\n')
-
-          arguments[key] = vals
         }
       }
 

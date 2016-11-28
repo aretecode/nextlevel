@@ -47,8 +47,10 @@ ext.point('app.setup').extend({
       })
     }
 
-    async function printFile() {
+    async function runCatchingExample() {
+      // this was the way to do it with await-to-try-catch
       // var asyncError = error => console.error(`error reading ${filename}:`, error.stack)
+
       try {
         const contents = await promised()
         console.log('always - awaited contents', contents)
@@ -75,7 +77,7 @@ ext.point('app.setup').extend({
       console.log('never - is caught by the errors bundle', contentsNever)
     }
 
-    printFile()
+    runCatchingExample()
     console.log('always - happens before awaiting')
   },
 })
