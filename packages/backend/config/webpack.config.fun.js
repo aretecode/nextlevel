@@ -14,18 +14,15 @@ config = _.defaultsDeep(config, {
     './src/index.js',
   ],
 
-  module: {
-    loaders: [
-
-    ],
-  },
-
   plugins: [
     new CleanWebpackPlugin(['dist']),
-    new webpack.DefinePlugin({'process.env.NODE_ENV': JSON.stringify('development')}),
+    new webpack.NoErrorsPlugin(),
+    new webpack.DefinePlugin({'process.env.NODE_ENV': JSON.stringify('fun')}),
   ],
 })
 
+// https://www.reddit.com/r/sweetjs/
+// http://sweetjs.org/doc/main/sweet.html#compiler-api
 // https://github.com/bopjesvla/sweet-loader -- doesnt work at all
 // https://github.com/sweet-js/sweet.js/blob/master/dist/sweet-loader.js
 // https://github.com/sweet-js/sweet.js/blob/master/src/sweet.js

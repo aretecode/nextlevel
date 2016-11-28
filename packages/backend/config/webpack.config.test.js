@@ -1,5 +1,9 @@
+var _ = require('lodash')
 var {exit} = require('nextlevel-helpers')
 var config = require('./webpack.config.base.node')
+var webpack = require('webpack')
+var path = require('path')
+var macro = path.resolve(__dirname, './macros.sjs')
 
 // node
 // https://github.com/request/request/issues/1529
@@ -81,5 +85,17 @@ var config = require('./webpack.config.base.node')
 //   test: path.resolve(dir + '/test'),
 // },
 
-module.exports = config
+_.defaultsDeep(config, {
+  plugins: [
+    new webpack.NoErrorsPlugin(),
+  ],
+})
+
+config.module.loaders.push({
+  test: /\.sjs$/,
+  loader: 'sweet-js-webpack-loader' + '?modules[]=' + macro + ',sourceMaps=false',
+})
+
 exit(30000)
+
+module.exports = config

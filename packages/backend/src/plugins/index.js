@@ -1,7 +1,7 @@
 export default function plugins(ext, di, config, db) {
   // only load sweetjs on dev for now
   let modulesContext
-  if (process.env.NODE_ENV === 'development') {
+  if (process.env.NODE_ENV === 'fun') {
     modulesContext = require.context('../plugins', true, /^\.\/[^\/]+?\/bundle(.*)\.s?js$/)
   }
   else {
