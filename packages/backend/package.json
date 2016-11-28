@@ -1,6 +1,6 @@
 {
   "name": "nextlevel-backend",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "back end 1 for nextlevel",
   "license": "MIT",
   "repository": "https://github.com/aretecode/nextlevel/tree/master/packages/back-end",
