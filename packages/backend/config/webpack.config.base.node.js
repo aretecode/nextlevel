@@ -8,4 +8,4 @@ var config = require('./webpack.config.base.js')
 
 _.defaultsDeep(config, nodeConfig)
 
-export default config
+module.exports = config

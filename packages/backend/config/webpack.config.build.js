@@ -26,6 +26,10 @@ config = _.defaultsDeep(config, {
   ],
 })
 
+// https://github.com/bopjesvla/sweet-loader -- doesnt work at all
+// https://github.com/sweet-js/sweet.js/blob/master/dist/sweet-loader.js
+// https://github.com/sweet-js/sweet.js/blob/master/src/sweet.js
+// https://github.com/sweet-js/sweet.js/issues/425
 // http://stackoverflow.com/questions/35678530/using-sweet-js-and-babel
 // Module build failed: TypeError: sweet.loadNodeModule is not a function
 // had to upgrade another loader https://github.com/aretecode/sweet-js-webpack-loader
