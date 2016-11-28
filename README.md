@@ -95,6 +95,7 @@ After doing some experimentation & research with him, I wrote out a list:
 - [ ] benchmarks for backend
 - [ ] real benchmarks
 - [ ] fix tests not stopping watching on their own
+- [x] add custom syntax with sweet.js + add a custom webpack loader for it
 
 ## step 10
 - [ ] write a blog post

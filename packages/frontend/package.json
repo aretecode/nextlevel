@@ -4,7 +4,7 @@
   "license": "MIT",
   "description": "front end for nextlevel",
   "repository": "https://github.com/aretecode/nextlevel/tree/master/packages/front-end",
-  "main": "lib/index.js",
+  "main": "dist/bundle.js",
   "keywords": [
     "monorepo",
     "nextlevel",

@@ -1,22 +1,22 @@
 var uglify = {
   report: 'gzip',
-  sourceMap: true,
-  minimize: true,
+  minimize: false,
   compress: {
     screw_ie8: true,
-    warnings: false,
+    warnings: true,
   },
   output: {
-    comments: false,
+    comments: true,
     screw_ie8: true,
   },
   sourceMaps: false,
   mangle: false,
+  beautify: true,
 }
 
 if (process.env.NODE_ENV === 'production') {
   uglify = {
-    mangle: false,
+    mangle: true,
     compress: {
       screw_ie8: true,
       warnings: false,

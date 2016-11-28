@@ -1,7 +1,6 @@
-var path = require('path')
-
 // above is packages, then the main
 // set these up for usage in all of the webpack configs
+var path = require('path')
 var dirMono = path.resolve(__dirname, "../../../")
 var dir = path.resolve(__dirname, "../")
 global.dirMono = dirMono

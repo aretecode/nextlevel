@@ -12,7 +12,7 @@ webpack(webpackConfig, () => {
 // @TODO: use an argument for this
 // exit it automatically if you forget
 setTimeout(function() {
-  process.exit(1)
+  process.exit(0)
 }, 1000000)
 
 // wait until after webpack builds for the first time
