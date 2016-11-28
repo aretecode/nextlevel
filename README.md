@@ -3,8 +3,7 @@
 -------------------
 
 
-![](https://travis-ci.org/aretecode/nextlevel.svg?branch=master)
-
+[![Build Status](https://travis-ci.org/aretecode/nextlevel.svg?branch=master)](https://travis-ci.org/aretecode/nextlevel)
 
 A month ago, my colleague Mario Scheliga asked me what goals I wanted to achieve before the year ends. I told him I wanted to level up my build tool skills. So in my free time, I started defining what “leveling up my build tool skills” meant. 
 After doing some experimentation & research with him, I wrote out a list:
@@ -51,7 +50,6 @@ After doing some experimentation & research with him, I wrote out a list:
 
 ## step 2
 - [x] set up configs extending each other
-- [x] clean proprietary code
 - [x] ensure lerna works properly
 
 ## step 3
@@ -96,10 +94,17 @@ After doing some experimentation & research with him, I wrote out a list:
 - [ ] benchmarks for backend
 - [ ] real benchmarks
 - [ ] fix tests not stopping watching on their own
-- [x] add custom syntax with sweet.js + add a custom webpack loader for it
 
 ## step 10
 - [ ] write a blog post
+
+## step 11
+- [x] add custom syntax with sweet.js 2
+- [x] add a custom webpack loader for it
+- [x] express 5
+- [x] eslint flowtypes
+- [ ] build sweetjs files from .sjs to .js before the rest
+- [ ] maybe add an atom plugin for compiling and saving sugarjs files on save like so many do with CoffeeScript
 
 ## next steps
 - [ ] worker
