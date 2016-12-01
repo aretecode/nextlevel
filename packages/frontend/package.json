@@ -1,6 +1,6 @@
 {
   "name": "nextlevel-frontend",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "license": "MIT",
   "description": "front end for nextlevel",
   "repository": "https://github.com/aretecode/nextlevel/tree/master/packages/front-end",
