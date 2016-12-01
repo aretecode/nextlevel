@@ -1,4 +1,4 @@
-module.exports = function(options = {hot: false, react: false}) {
+module.exports = function(options = {hot: false, react: false, asObject: false}) {
   var presets = [
     'es2015-webpack2',
     'stage-0',
@@ -18,6 +18,10 @@ module.exports = function(options = {hot: false, react: false}) {
   if (options.hot) {
     plugins.push('react-hot-loader/babel')
     presets.push('react-hmre')
+  }
+
+  if (options.asObject) {
+    return {plugins, presets}
   }
 
   presets = 'presets[]=' + presets.join(',presets[]=')

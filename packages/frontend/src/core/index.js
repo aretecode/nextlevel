@@ -1,12 +1,16 @@
 import {ext, loader} from 'xtpoints'
-const di = {}
+import Bottle from 'bottlejs'
 
+// container
+const di = new Bottle()
+
+// load & bootstrap the plugins
 const modulesContext = require.context('../plugins', true, /^\.\/[^\/]+?\/bundle(.*)\.s?js$/)
 loader(modulesContext, __webpack_require__, ext, di)
 
 export default {
-  ext: ext,
-  di: di,
+  ext,
+  di,
 }
 
 export {

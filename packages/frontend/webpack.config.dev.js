@@ -16,6 +16,8 @@ var config = {
   context: dir,
   watch: true,
   plugins: [
+    new webpack.DefinePlugin({'process.env.NODE_ENV': JSON.stringify('development')}),
+    new webpack.DefinePlugin({'window.DEVELOPMENT': true}),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
     new CleanWebpackPlugin(['dist', 'static']),

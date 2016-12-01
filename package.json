@@ -1,7 +1,7 @@
 {
   "name": "nextlevel",
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Skeleton build tool learning using: lerna monorepo, webpack2, nodejs, hot reloader 3, react router 4, preact, jsdom, enzyme, babel6 loader, async extension point bootstrap, flowtypes, eslint autofixing...",
   "repository": "git@github.com:aretecode/nextlevel.git",
   "scripts": {
@@ -15,12 +15,10 @@
   },
   "devDependencies": {
     "babel": "^6.5.2",
-    "babel-cli": "^6.11.4",
+    "babel-cli": "^6.18.0",
     "babel-core": "^6.18.2",
     "babel-eslint": "^7.1.0",
     "babel-loader": "^6.2.8",
-    "babel-plugin-external-helpers": "^6.18.0",
-    "babel-plugin-syntax-exists": "0.0.3",
     "babel-plugin-transform-async-to-generator": "^6.16.0",
     "babel-plugin-transform-class-properties": "6.18.0",
     "babel-plugin-transform-decorators-legacy": "1.3.4",
@@ -42,7 +40,7 @@
     "eslint": "^3.11.1",
     "eslint-loader": "1.5.0",
     "eslint-plugin-flowtype": "^2.28.2",
-    "eslint-plugin-no-for-each": "0.1.10",
+    "eslint-plugin-no-for-each": "0.1.14",
     "eslint-plugin-react": "^6.7.1",
     "lerna": "2.0.0-beta.30",
     "sweet.js": "^1.0.0",

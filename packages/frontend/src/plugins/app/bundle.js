@@ -6,6 +6,6 @@ export const bootstrap = (ext) => {
     id: 'main',
     exec: () => {
       return render(<AppRoot/>, document.querySelector('#app'))
-    }
+    },
   })
 }

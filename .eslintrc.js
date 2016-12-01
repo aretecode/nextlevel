@@ -118,7 +118,7 @@ module.exports = {
     'no-empty-character-class': 2,
     'no-self-compare': 2,
     'valid-typeof': 2,
-    'no-unused-vars': 2,
+    'no-unused-vars': 1,
     'handle-callback-err': 2,
     'no-shadow-restricted-names': 2,
     'no-new-require': 2,
@@ -159,9 +159,9 @@ module.exports = {
       2,
       'comma',
     ],
-    'flowtype/require-parameter-type': 2,
+    'flowtype/require-parameter-type': 1,
     'flowtype/require-return-type': [
-      2,
+      1,
       'always',
       {
         'annotateUndefined': 'never',

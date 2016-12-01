@@ -1,7 +1,7 @@
 import {AppContainer} from 'react-hot-loader'
 import React from 'react'
 import {render} from 'react-dom'
-import AppRoot from '../app/App' // 'plugins/app/AppRoot'
+import AppRoot from 'plugins/app/AppRoot'
 
 ext.point('core.attach.hot').extend({
   id: 'main',

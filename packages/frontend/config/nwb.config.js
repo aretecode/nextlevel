@@ -42,7 +42,7 @@ var karmaConfig = {
     'jsdom',
   ],
 
-  logLevel: 'debug',
+  // logLevel: 'debug',
   nocache: true,
   singleRun: false,
   autoWatch: false,
@@ -56,11 +56,11 @@ const config = {
 
   // using webpack loader
   babel: {
-    stage: false
+    // stage: false,
   },
   webpack: {
     extra: webpackConfig,
-  }
+  },
 }
 
 module.exports = config
