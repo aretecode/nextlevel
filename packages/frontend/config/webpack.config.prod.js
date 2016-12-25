@@ -6,7 +6,7 @@ var path = require('path')
 var dir = path.resolve(__dirname, "../")
 var dirMono = path.resolve(__dirname, "../../../")
 var uglify = require(dirMono + '/config/build/uglify')
-var babel = require(dirMono + '/config/build/babel-loader.js')({hot: false, react: true})
+var babel = require('babel-loader-builder')({hot: false, react: true})
 
 _.assign(config, {
   entry: './src',
