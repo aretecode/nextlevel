@@ -1,7 +1,7 @@
 var _ = require('lodash')
 var path = require('path')
 var dirMono = path.resolve(__dirname, "../../../")
-var babel = require(dirMono + '/config/build/babel-loader.js')({hot: false, react: true})
+var babel = require('babel-loader-builder')({hot: false, react: true})
 var config = require('./webpack.config.base.js')
 
 // https://github.com/airbnb/enzyme/issues/341

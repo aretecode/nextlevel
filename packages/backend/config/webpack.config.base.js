@@ -6,7 +6,7 @@ var dir = path.resolve(__dirname, "../")
 global.dirMono = dirMono
 global.dir = dir
 
-var babel = require(dirMono + '/config/build/babel-loader.js')({hot: false, react: false})
+var babel = require('babel-loader-builder')({hot: false, react: false})
 
 console.log('args', process.argv)
 

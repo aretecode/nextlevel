@@ -1,0 +1,8 @@
+{"path":"/helpscout","query":{"email":"biggie@smalls.com"},"body":{},"params":{},"date":1482627730398}
+{"path":"/staff/tools/whitelists/item1,item2,item3","query":{},"body":{"body":{"id":"1"},"params":{"list":"item1,item2,item3"},"id":"1","user":{"role":"admin"},"customer":{"email":"biggie@smalls.com"}},"params":{},"date":1482627730418}
+{"path":"/staff/tools/whitelists/item1,item2,item3","query":{},"body":{"body":{"id":"1"},"params":{"list":"item1,item2,item3"},"id":"1","user":{"role":"admin"},"customer":{"email":"biggie@smalls.com"}},"params":{},"date":1482627730441}
+{"path":"/staff/tools/whitelists/","query":{},"body":{},"params":{},"date":1482627730449}
+{"path":"/helpscout","query":{"email":"biggie@smalls.com"},"body":{},"params":{},"date":1482627995364}
+{"path":"/staff/tools/whitelists/item1,item2,item3","query":{},"body":{"body":{"id":"1"},"params":{"list":"item1,item2,item3"},"id":"1","user":{"role":"admin"},"customer":{"email":"biggie@smalls.com"}},"params":{},"date":1482627995385}
+{"path":"/staff/tools/whitelists/item1,item2,item3","query":{},"body":{"body":{"id":"1"},"params":{"list":"item1,item2,item3"},"id":"1","user":{"role":"admin"},"customer":{"email":"biggie@smalls.com"}},"params":{},"date":1482627995407}
+{"path":"/staff/tools/whitelists/","query":{},"body":{},"params":{},"date":1482627995414}
